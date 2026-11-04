@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walima Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <div class="login-container" id="loginSection">
+        <div class="login-card">
+            <h1>Ahmed & Laiba</h1>
+            <p>Walima Admin Portal</p>
+
+            <form id="loginForm">
+                <label>Username</label>
+                <input type="text" id="username" required>
+
+                <label>Password</label>
+                <input type="password" id="password" required>
+
+                <button type="submit" id="loginBtn">Login</button>
+                <p id="loginMessage"></p>
+            </form>
+        </div>
+    </div>
+
+    <main class="dashboard" id="dashboardSection" hidden>
+
+        <header class="topbar">
+            <div>
+                <h1>Walima Dashboard</h1>
+                <p>Ahmed & Laiba | 1 January 2027</p>
+            </div>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span>Total Visits</span>
+                <h2 id="totalVisits">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Total RSVPs</span>
+                <h2 id="totalRSVPs">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Attending</span>
+                <h2 id="attending">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Not Attending</span>
+                <h2 id="notAttending">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Total Guests</span>
+                <h2 id="totalGuests">0</h2>
+            </div>
+        </section>
+
+        <section class="guest-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Guest RSVP Records</h2>
+                    <p>All submitted invitation responses</p>
+                </div>
+
+                <button id="refreshBtn">Refresh</button>
+            </div>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search guest name or phone..."
+            >
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Attendance</th>
+                            <th>Guests</th>
+                            <th>Submitted At</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rsvpTable"></tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button id="prevBtn">Previous</button>
+                <span id="pageInfo">Page 1</span>
+                <button id="nextBtn">Next</button>
+            </div>
+
+            <p id="dashboardMessage"></p>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>
