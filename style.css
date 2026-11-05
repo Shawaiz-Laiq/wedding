@@ -594,6 +594,7 @@ body.invitation-open .invitation {
     aspect-ratio: 4 / 5;
     overflow: hidden;
     background: #e8ddca;
+    height: 690px;
 }
 
 .photo-inner img {
