@@ -137,26 +137,30 @@ const attendanceInput = document.getElementById("attendance");
 const guestCountGroup = document.getElementById("guestCountGroup");
 const guestCountInput = document.getElementById("guestCount");
 
-const whatsappLink = document.getElementById("whatsappLink");
+// const whatsappLink = document.getElementById("whatsappLink");
 
 const API = "https://ahmedwedding-two.vercel.app/api/rsvp";
 
 // Open modal
 rsvpOpen.addEventListener("click", function () {
     rsvpOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
 });
 
-// Close modal
 closeRsvp.addEventListener("click", function () {
     rsvpOverlay.classList.remove("active");
+    document.body.style.overflow = "";
 });
 
-// Close by clicking outside
 rsvpOverlay.addEventListener("click", function (event) {
     if (event.target === rsvpOverlay) {
         rsvpOverlay.classList.remove("active");
+        document.body.style.overflow = "";
     }
 });
+
+// Close by clicking outside
+
 
 // Show guest count only if attending
 attendanceInput.addEventListener("change", function () {
@@ -166,7 +170,7 @@ attendanceInput.addEventListener("change", function () {
         guestCountInput.required = false;
         guestCountInput.value = "1";
     } else {
-        guestCountGroup.style.display = "flex";
+        guestCountGroup.style.display = "block";
         guestCountInput.required = true;
     }
 
@@ -199,7 +203,7 @@ rsvpForm.addEventListener("submit", async function (event) {
     submitButton.disabled = true;
     submitButton.textContent = "SUBMITTING...";
     rsvpMessage.textContent = "Please wait...";
-    whatsappLink.style.display = "none";
+    // whatsappLink.style.display = "none";
 
     try {
 
@@ -222,16 +226,16 @@ rsvpForm.addEventListener("submit", async function (event) {
             throw new Error(result.message || "RSVP submission failed.");
         }
 
-        rsvpMessage.textContent =
-            `Thank you, ${name}! Your response has been saved successfully.`;
+       rsvpMessage.textContent = `Thank You, ${name}!`;
 
-        if (result.whatsappLink) {
-            whatsappLink.href = result.whatsappLink;
-            whatsappLink.style.display = "inline-block";
-        }
+rsvpForm.reset();
+guestCountGroup.style.display = "block";
 
-        rsvpForm.reset();
-        guestCountGroup.style.display = "flex";
+        // if (result.whatsappLink) {
+        //     whatsappLink.href = result.whatsappLink;
+        //     whatsappLink.style.display = "inline-block";
+        // }
+
 
     } catch (error) {
 

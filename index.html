@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -167,39 +170,39 @@
                 <h3 class="event-day">01</h3>
 
                 <!-- VIP COUNTDOWN -->
-<div class="countdown-section">
+                <div class="countdown-section">
 
-    <p class="countdown-heading">COUNTING DOWN TO OUR SPECIAL DAY</p>
+                    <p class="countdown-heading">COUNTING DOWN TO OUR SPECIAL DAY</p>
 
-    <div class="countdown-grid">
+                    <div class="countdown-grid">
 
-        <div class="countdown-box">
-            <span id="days">000</span>
-            <small>DAYS</small>
-        </div>
+                        <div class="countdown-box">
+                            <span id="days">000</span>
+                            <small>DAYS</small>
+                        </div>
 
-        <div class="countdown-box">
-            <span id="hours">00</span>
-            <small>HOURS</small>
-        </div>
+                        <div class="countdown-box">
+                            <span id="hours">00</span>
+                            <small>HOURS</small>
+                        </div>
 
-        <div class="countdown-box">
-            <span id="minutes">00</span>
-            <small>MINUTES</small>
-        </div>
+                        <div class="countdown-box">
+                            <span id="minutes">00</span>
+                            <small>MINUTES</small>
+                        </div>
 
-        <div class="countdown-box">
-            <span id="seconds">00</span>
-            <small>SECONDS</small>
-        </div>
+                        <div class="countdown-box">
+                            <span id="seconds">00</span>
+                            <small>SECONDS</small>
+                        </div>
 
-    </div>
+                    </div>
 
-    <p class="countdown-note" id="countdownNote">
-        Every second brings us closer to forever.
-    </p>
+                    <p class="countdown-note" id="countdownNote">
+                        Every second brings us closer to forever.
+                    </p>
 
-</div>
+                </div>
 
                 <div class="gold-divider">
                     <span></span>
@@ -238,12 +241,7 @@
                         Please update this with your venue address.
                     </p>
 
-                    <a
-                        href="https://www.google.com/maps"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="map-link"
-                    >
+                    <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" class="map-link">
                         VIEW LOCATION
                     </a>
                 </div>
@@ -311,32 +309,23 @@
                 Kindly let us know if you can join us.
             </p>
 
-            
-<form id="rsvpForm">
 
-    <label for="guestName">Your Name</label>
-    <input
-        type="text"
-        id="guestName"
-        placeholder="Enter your name"
-        required
-    >
+            <form id="rsvpForm">
 
-    <label for="guestPhone">Phone Number</label>
-    <input
-        type="tel"
-        id="guestPhone"
-        placeholder="923001234567"
-        required
-    >
+                <label for="guestName">Your Name</label>
+                <input type="text" id="guestName" placeholder="Enter your name" required>
 
-    <label for="attendance">Will you attend?</label>
-    <select id="attendance" required>
-        <option value="">Select your response</option>
-        <option value="Yes">Joyfully Accept</option>
-        <option value="No">Regretfully Decline</option>
-    </select>
+                <label for="guestPhone">Phone Number</label>
+                <input type="tel" id="guestPhone" placeholder="03001234567" required>
 
+                <label for="attendance">Will you attend?</label>
+                <select id="attendance" required>
+                    <option value="">Select your response</option>
+                    <option value="Yes">Joyfully Accept</option>
+                    <option value="No">Regretfully Decline</option>
+                </select>
+
+                <div id="guestCountGroup">
     <label for="guestCount">Total Guests (Including You)</label>
     <input
         type="number"
@@ -346,25 +335,20 @@
         value="1"
         required
     >
+</div>
 
-    <button type="submit" class="submit-rsvp">
-        SUBMIT RESPONSE
-    </button>
+                <button type="submit" class="submit-rsvp">
+                    SUBMIT RESPONSE
+                </button>
 
-</form>
+            </form>
 
-<p class="rsvp-message" id="rsvpMessage"></p>
+            <p class="rsvp-message" id="rsvpMessage"></p>
 
-<a
-    id="whatsappLink"
-    class="map-link"
-    href="#"
-    target="_blank"
-    rel="noopener noreferrer"
-    style="display:none;"
->
-    SEND RSVP ON WHATSAPP
-</a>
+            <!-- <a id="whatsappLink" class="map-link" href="#" target="_blank" rel="noopener noreferrer"
+                style="display:none;">
+                SEND RSVP ON WHATSAPP
+            </a> -->
 
 
             <p class="rsvp-message" id="rsvpMessage"></p>
@@ -377,4 +361,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>

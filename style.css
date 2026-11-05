@@ -823,6 +823,7 @@ body.invitation-open .invitation {
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
+    
 }
 
 .rsvp-overlay.active {
@@ -1186,4 +1187,37 @@ body.invitation-open .invitation {
     100% {
         transform: translateX(-50%) rotate(8deg);
     }
+}
+
+/* RSVP MODAL SCROLL FIX */
+
+.rsvp-overlay {
+    overflow-y: auto;
+    padding: 20px 12px;
+    align-items: flex-start;
+}
+
+.rsvp-modal {
+    position: relative;
+    /* max-height: 85vh; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: auto;
+    overscroll-behavior: contain;
+}
+
+/* Close X stays visible at top */
+/* #closeRsvp {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    float: right;
+    background: #4b1020;
+    cursor: pointer;
+} */
+
+/* Smooth scrolling inside modal */
+.rsvp-modal {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
